@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfólio de Bruno Floro - Estudante de Engenharia da Computação e Desenvolvedor">
+    <title>Bruno Floro | Engenharia da Computação</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a href="#" class="Logo">Portfólio</a>
+            
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+            <div class="language-switcher">
+                <div class="selected-lang">
+                    <span class="lang-flag">🇧🇷</span>
+                    <span class="lang-code">PT</span>
+                </div>
+                <ul class="language-list">
+                    <li data-lang="pt">🇧🇷 Português</li>
+                    <li data-lang="en">🇬🇧 English</li>
+                    <li data-lang="es">🇪🇸 Español</li>
+                    <li data-lang="de">🇩🇪 Deutsch</li>
+                    <li data-lang="ru">🇷🇺 Русский</li>
+                </ul>
+            </div>
+            
+            <nav class="navbar">
+                <a href="#" class="active" data-tooltip="Página inicial">Home</a>
+                <a href="#" data-tooltip="Conheça mais sobre mim">Sobre</a>
+                <a href="#" data-tooltip="Conheça meus projetos">Portfólio</a>
+                <a href="#" data-tooltip="Principais atuações">Serviços</a>
+                <a href="#" data-tooltip="Entre em contato">Contato</a>
+            </nav>
+        </header>
+        
+        <section class="home">
+            <div class="home-detail">
+                <h1>BRUNO FLORO</h1>
+                <h2>Estudante de Engenharia da Computação</h2>
+                <p>Sou estudante do 5º período de Engenharia da Computação pela Universidade Federal Rural de Pernambuco, com foco no desenvolvimento de soluções inovadoras que conectam tecnologia e usabilidade. Tenho experiência com linguagens como Python, JavaScript, HTML e CSS, além de estar constantemente me aprimorando em áreas como programação full-stack, inteligência artificial e gerenciamento de projetos. Meu objetivo é transformar ideias em soluções eficientes, unindo lógica, criatividade e um olhar atento às necessidades do usuário.</p>
+                
+                <div class="download-social">
+                    <a href="#" class="btn">
+                        <i class="fas fa-download"></i> Download CV
+                    </a>
+                    
+                    <div class="social-icons">
+                        <a href="https://github.com/ibrunu" target="_blank" title="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="mailto:ibruliveira@gmail.com" title="E-mail">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <a href="tel:+5581973004079" title="Telefone">
+                            <i class="fas fa-phone"></i>
+                        </a>
+                        <a href="https://linkedin.com/in/seu-perfil" target="_blank" title="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="home-img">
+                <img src="Foto.png" alt="Bruno Floro - Estudante de Engenharia da Computação">
+            </div>
+        </section>
+        
+        <footer>
+            <div class="footer-content">
+                <p>© 2025 Bruno Floro - Todos os direitos reservados</p>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navbar = document.querySelector('.navbar');
+        
+        menuToggle.addEventListener('click', () => {
+            navbar.classList.toggle('active');
+            menuToggle.classList.toggle('active');
+        });
+        
+        document.querySelectorAll('.navbar a').forEach(link => {
+            link.addEventListener('click', () => {
+                navbar.classList.remove('active');
+                menuToggle.classList.remove('active');
+            });
+        });
+        
+        const translations = {
+            pt: {
+                home: "Home",
+                about: "Sobre",
+                portfolio: "Portfólio",
+                services: "Serviços",
+                contact: "Contato",
+                name: "BRUNO FLORO",
+                title: "Estudante de Engenharia da Computação",
+                description: "Sou estudante do 5º período de Engenharia da Computação pela Universidade Federal Rural de Pernambuco, com foco no desenvolvimento de soluções inovadoras que conectam tecnologia e usabilidade. Tenho experiência com linguagens como Python, JavaScript, HTML e CSS, além de estar constantemente me aprimorando em áreas como programação full-stack, inteligência artificial e gerenciamento de projetos. Meu objetivo é transformar ideias em soluções eficientes, unindo lógica, criatividade e um olhar atento às necessidades do usuário.",
+                download: "Download CV",
+                copyright: "© 2025 Bruno Floro - Todos os direitos reservados"
+            },
+            en: {
+                home: "Home",
+                about: "About",
+                portfolio: "Portfolio",
+                services: "Services",
+                contact: "Contact",
+                name: "BRUNO FLORO",
+                title: "Computer Engineering Student",
+                description: "I'm a 5th semester Computer Engineering student at the Federal Rural University of Pernambuco, focused on developing innovative solutions that connect technology and usability. I have experience with languages like Python, JavaScript, HTML, and CSS, and I'm constantly improving my skills in areas such as full-stack programming, artificial intelligence, and project management. My goal is to transform ideas into efficient solutions by combining logic, creativity, and attention to user needs.",
+                download: "Download CV",
+                copyright: "© 2025 Bruno Floro - All rights reserved"
+            },
+            es: {
+                home: "Inicio",
+                about: "Sobre mí",
+                portfolio: "Portafolio",
+                services: "Servicios",
+                contact: "Contacto",
+                name: "BRUNO FLORO",
+                title: "Estudiante de Ingeniería en Computación",
+                description: "Soy estudiante del 5º semestre de Ingeniería en Computación en la Universidad Federal Rural de Pernambuco, enfocado en el desarrollo de soluciones innovadoras que conectan tecnología y usabilidad. Tengo experiencia con lenguajes como Python, JavaScript, HTML y CSS, además de estar constantemente mejorando en áreas como programación full-stack, inteligencia artificial y gestión de proyectos. Mi objetivo es transformar ideas en soluciones eficientes, uniendo lógica, creatividad y una mirada atenta a las necesidades del usuario.",
+                download: "Descargar CV",
+                copyright: "© 2025 Bruno Floro - Todos los derechos reservados"
+            },
+            de: {
+                home: "Startseite",
+                about: "Über mich",
+                portfolio: "Portfolio",
+                services: "Dienstleistungen",
+                contact: "Kontakt",
+                name: "BRUNO FLORO",
+                title: "Student der Computertechnik",
+                description: "Ich bin ein Student der Computertechnik im 5. Semester an der Bundesuniversität von Pernambuco mit Schwerpunkt auf der Entwicklung innovativer Lösungen, die Technologie und Benutzerfreundlichkeit verbinden. Ich habe Erfahrung mit Sprachen wie Python, JavaScript, HTML und CSS und verbessere mich ständig in Bereichen wie Full-Stack-Programmierung, künstlicher Intelligenz und Projektmanagement. Mein Ziel ist es, Ideen in effiziente Lösungen umzuwandeln, indem ich Logik, Kreativität und ein Auge für die Bedürfnisse der Benutzer verbinde.",
+                download: "Lebenslauf herunterladen",
+                copyright: "© 2025 Bruno Floro - Alle Rechte vorbehalten"
+            },
+            ru: {
+                home: "Главная",
+                about: "Обо мне",
+                portfolio: "Портфолио",
+                services: "Услуги",
+                contact: "Контакт",
+                name: "БРУНО ФЛОРО",
+                title: "Студент компьютерной инженерии",
+                description: "Я студент 5-го семестра компьютерной инженерии в Федеральном сельском университете Пернамбуку, занимаюсь разработкой инновационных решений, объединяющих технологии и удобство использования. У меня есть опыт работы с такими языками, как Python, JavaScript, HTML и CSS, и я постоянно совершенствуюсь в таких областях, как full-stack программирование, искусственный интеллект и управление проектами. Моя цель - превращать идеи в эффективные решения, сочетая логику, творчество и внимание к потребностям пользователя.",
+                download: "Скачать резюме",
+                copyright: "© 2025 Бруно Флоро - Все права защищены"
+            }
+        };
+
+        const languageData = {
+            pt: { flag: "🇧🇷", code: "PT" },
+            en: { flag: "🇬🇧", code: "EN" },
+            es: { flag: "🇪🇸", code: "ES" },
+            de: { flag: "🇩🇪", code: "DE" },
+            ru: { flag: "🇷🇺", code: "RU" }
+        };
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // Verificar idioma preferido do navegador
+            const browserLang = navigator.language.substring(0, 2);
+            const supportedLangs = ['pt', 'en', 'es', 'de', 'ru'];
+            const defaultLang = supportedLangs.includes(browserLang) ? browserLang : 'pt';
+            
+            // Carregar idioma salvo ou usar o padrão
+            const userLang = localStorage.getItem('preferredLanguage') || defaultLang;
+            
+            function changeLanguage(lang) {
+                document.querySelector('.home h1').textContent = translations[lang].name;
+                document.querySelector('.home h2').textContent = translations[lang].title;
+                document.querySelector('.home p').textContent = translations[lang].description;
+                document.querySelector('.btn').innerHTML = `<i class="fas fa-download"></i> ${translations[lang].download}`;
+                document.querySelector('.footer-content p').textContent = translations[lang].copyright;
+                
+                document.querySelectorAll('.navbar a')[0].textContent = translations[lang].home;
+                document.querySelectorAll('.navbar a')[1].textContent = translations[lang].about;
+                document.querySelectorAll('.navbar a')[2].textContent = translations[lang].portfolio;
+                document.querySelectorAll('.navbar a')[3].textContent = translations[lang].services;
+                document.querySelectorAll('.navbar a')[4].textContent = translations[lang].contact;
+                
+                const selectedLang = document.querySelector('.selected-lang');
+                selectedLang.querySelector('.lang-flag').textContent = languageData[lang].flag;
+                selectedLang.querySelector('.lang-code').textContent = languageData[lang].code;
+                
+                localStorage.setItem('preferredLanguage', lang);
+                
+                document.documentElement.lang = lang;
+            }
+            
+            changeLanguage(userLang);
+            
+            document.querySelectorAll('.language-list li').forEach(item => {
+                item.addEventListener('click', function() {
+                    const lang = this.getAttribute('data-lang');
+                    changeLanguage(lang);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
